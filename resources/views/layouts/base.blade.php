@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ $title ?? 'Название страницы'}} - {{config('app.name')}}</title>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <style type="text/tailwinds.css">
-        @theme {
-            --color-main: yellow;
-        }
-    </style>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
 </head>
-<body class="text-base text-grey-950 font-normal bg-gray-200 max-w-screen">
-    @include('layouts.partials.header')
-    {{ $slot }}
+
+<body class="font-sans antialiased">
+    <div class="min-h-screen bg-gray-100">
+        @include('layouts.partials.header')
+        <main>
+            @include('web.sections.intro.index')
+        </main>
+    </div>
 </body>
+
 </html>

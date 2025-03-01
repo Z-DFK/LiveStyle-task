@@ -1,56 +1,42 @@
-<header aria-label="Шапка сайта" class="mt-[35px] absolute top-0 right-0 left-0" id="header">
+<header class="border-b border-gray-700 py-2.5">
     <x-container>
-        <div class="max-w-full px-3 py-6 rounded-full flex items-center justify-between">
-            <div aria-label="Логотип" class=" shrink-0">
-                <a aria-label="На главную" href="{{ route('page.home')}}" class="">
-                    <img src="{{ asset('images/Logos.svg') }}" alt="Логтип сайта {{ config('app.name')}}" class="">
+        <div class="flex justify-between items-center">
+            <div class="">
+                <a href=" {{route('page.home') }}" class="text-2xl">
+                    <i class='bx bxl-sketch'></i>
                 </a>
             </div>
-            {{-- navvvvv --}}
-
-            <nav aria-label="Навигация" class="hidden md:block">
-                <menu aria-label="Меню навигации" class="flex items-center gap-10">
-                    <li aria-label="Элемент меню навигации" class="inline-flex">
-                        <a aria-label="Product" href="#!" class="text-gray-300 font-medium transition-colors hover:text-gray-800">About Us</a>
+            <nav>
+                <ul class="flex text-gray-400 text-lg gap-2">
+                    <li class="">
+                        <a href="" class="hover:text-gray-800 hover:font-semibold">Web</a>
                     </li>
-                    <li aria-label="Элемент меню навигации" class="inline-flex">
-                        <a aria-label="Services" href="#!" class="text-gray-300 font-medium transition-colors hover:text-gray-800">Services</a>
+                    <li class="">
+                        <a href="" class="hover:text-gray-800 hover:font-semibold">Sports</a>
                     </li>
-                    <li aria-label="Элемент меню навигации" class="inline-flex">
-                        <a aria-label="Product" href="#!" class="text-gray-300 font-medium transition-colors hover:text-gray-800">Opinion</a>
+                    <li class="">
+                        <a href="" class="hover:text-gray-800 hover:font-semibold">Opinion</a>
                     </li>
-                    <li aria-label="Элемент меню навигации" class="inline-flex">
-                        <a aria-label="About" href="#!" class="text-gray-300 font-medium transition-colors hover:text-gray-800">Lifestyle</a>
+                    <li class="">
+                        <a href="" class="hover:text-gray-800 hover:font-semibold">Lifestyle</a>
                     </li>
-                    <li aria-label="Элемент меню навигации" class="inline-flex">
-                        <a aria-label="About" href="#!" class="text-gray-300 font-medium transition-colors hover:text-gray-800">Business</a>
+                    <li class="">
+                        <a href="" class="hover:text-gray-800 hover:font-semibold">Business</a>
                     </li>
-                    <li aria-label="Элемент меню навигации" class="inline-flex">
-                        <a aria-label="About" href="#!" class="text-gray-300 font-medium transition-colors hover:text-gray-800">Culture</a>
+                    <li class="">
+                        <a href="" class="hover:text-gray-800 hover:font-semibold">Culture</a>
                     </li>
-                    <li aria-label="Элемент меню навигации" class="inline-flex">
-                        <a aria-label="About" href="#!" class="text-gray-300 font-medium transition-colors hover:text-gray-800">Groomers</a>
+                    <li class="">
+                        <a href="" class="hover:text-gray-800 hover:font-semibold">Fashion</a>
                     </li>
-                    <li aria-label="Элемент меню навигации" class="inline-flex">
-                        <a aria-label="About" href="#!" class="text-gray-300 font-medium transition-colors hover:text-gray-800">Tech</a>
+                    <li class="">
+                        <a href="" class="hover:text-gray-800 hover:font-semibold">Tech</a>
                     </li>
-                </menu>
+                </ul>
             </nav>
-
-            <button aria-label='Открыть модальное окно' class="bg-orange-400 flex items-center gap-3 text-center text-white rounded-full px-[30px] py-[12px] border border-orange-400 cursor-pointer">
-                Get Member
-            </button>
-
-            @if (Route::has('login'))
-                @auth
-                    <a href="{{ url('/dashboard') }}" class="bg-orange-400 flex items-center gap-3 text-center text-white rounded-full px-[30px] py-[12px] border border-orange-400 cursor-pointer">Личный кабинет</a>
-                @else
-                    <a href="{{ route('login') }}" class="bg-orange-400 flex items-center gap-3 text-center text-white rounded-full px-[30px] py-[12px] border border-orange-400 cursor-pointer">Войти</a>
-                    @if(Route::has('register'))
-                        <a href="{{ route('register') }}" class="bg-orange-400 flex items-center gap-3 text-center text-white rounded-full px-[30px] py-[12px] border border-orange-400 cursor-pointer">Зарегистрироваться</a>
-                    @endif
-                @endauth
-            @endif
+            <div class="">
+                <img class="w-[50px] h-[50px] rounded-full" src="{{ asset('storage/image/prod1.jpg') }}" alt="">
+            </div>
         </div>
     </x-container>
 </header>
